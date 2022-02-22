@@ -23,35 +23,6 @@ const connect = function () {
     conn.write('Name: JB');
   });
 
-
-
-
-  // conn.on('connect', () => {
-  //   setInterval(() => {
-  //     conn.write("Move: left");
-  //   }, 500);
-  // });
-
-  // conn.on('connect', () => {
-  //   setInterval(() => {
-  //     conn.write("Move: down");
-  //   }, 1000);
-  // });
-
-  // conn.on('connect', () => {
-  //   setInterval(() => {
-  //     conn.write("Move: up");
-  //   }, 1000);
-  // });
-
-  // setInterval(() => {
-  //   conn.write("Move: left");
-  // }, 1000);
-  // setInterval(() => {
-  //   conn.write("Move: right");
-  // }, 1000);
-
-
   return conn;
 };
 

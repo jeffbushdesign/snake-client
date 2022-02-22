@@ -1,33 +1,18 @@
 
 
 
-const { connect } = require("./client.js");
+const { connect } = require("./client");
+const { setupInput } = require("./input");
+
 
 console.log("Connecting ...");
-connect();
-
-// setup interface to handle user input from stdin
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.on("data", handleUserInput);
-  stdin.resume();
-  return stdin;
-};
+let conn = connect();
 
 
-const handleUserInput = function (key) {
-  // your code here
-  // \u0003 maps to ctrl+c input
-  if (key === '\u0003') {
-    process.exit();
-  }
-};
 
 
-setupInput();
+
+setupInput(conn);
 
 // on any input from stdin (standard input), output a "." to stdout
 // stdin.on('data', (key) => {
