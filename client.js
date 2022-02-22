@@ -25,33 +25,24 @@ const connect = function () {
 
 
 
-  // for (const item of args) {
-  //   // console.log(item);
-  //   setTimeout(() => {
-  //     // process.stdout.write(item);
-  //     // process.stdout.write('\x07');
-  //     console.log(`${item} second timer says: BEEP!`);
-  //   }, item * 1000);
-  //   // item * 1000: time in js is an milliseconds, 10 s x 1000ms = 10,000 ms = 10 s
-  // };
 
-  conn.on('connect', () => {
-    setInterval(() => {
-      conn.write("Move: left");
-    }, 500);
-  });
+  // conn.on('connect', () => {
+  //   setInterval(() => {
+  //     conn.write("Move: left");
+  //   }, 500);
+  // });
 
-  conn.on('connect', () => {
-    setInterval(() => {
-      conn.write("Move: down");
-    }, 1000);
-  });
+  // conn.on('connect', () => {
+  //   setInterval(() => {
+  //     conn.write("Move: down");
+  //   }, 1000);
+  // });
 
-  conn.on('connect', () => {
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 1000);
-  });
+  // conn.on('connect', () => {
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 1000);
+  // });
 
   // setInterval(() => {
   //   conn.write("Move: left");
