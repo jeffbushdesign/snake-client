@@ -3,7 +3,6 @@ let connection;
 
 // setup interface to handle user input from stdin
 const setupInput = (input) => {
-
   connection = input;
   const stdin = process.stdin;
   stdin.setRawMode(true);
